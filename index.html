@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CIFSL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .bg-navy {
+            background-color: #001233;
+        }
+        
+        .text-navy {
+            color: #001233;
+        }
+
+        /* Section Spacing */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Purpose Section Customizations */
+        .purpose-border {
+            border-left: 3px solid #000;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .section-heading {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Feature Cards (Dark Section) */
+        .feature-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .feature-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dark-card-subtitle {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Focus Areas Grid */
+        .focus-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 1200px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .focus-card {
+            background-color: white;
+            padding: 30px 15px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .focus-card i {
+            font-size: 2.5rem;
+            color: #0b1528;
+            margin-bottom: 15px;
+        }
+        .focus-card p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Custom Styles for the Metrics Section */
+        .metrics-section {
+            padding: 60px 0;
+            background-color: #ffffff; /* Clean white background */
+            font-family: Arial, sans-serif;
+        }
+        
+        .metrics-title {
+            color: #03201f; /* Dark teal color for heading */
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        
+        .stat-value {
+            color: #0dcaf0 !important; /* Light cyan/teal color for numbers */
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #6c757d ; /* Muted gray for text below numbers */
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        /*nav bar*/
+        .log {
+            display: none;
+        }
+
+        .bg-blue .log {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-5">
+        <div class="container-fluid px-5">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img src="./banner/cifls-logo-light.svg" alt="" class="img-fluid log" style="height: 4rem;">
+                <a href="index.html" class="navbar-brand" style="visibility: hidden;">
+                    <h1>iSTUDIO</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown d-none">
+                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="./ma.html" class="dropdown-item">Mergers & Acquisitions (M&A) Consulting</a>
+                                <a href="./real.html" class="dropdown-item">Real Estate Syndication & Alternative Assets Advisory</a>
+                                <a href="./invest.html" class="dropdown-item">Investment Banking</a>
+                                <a href="./finance.html" class="dropdown-item">Financial & Strategic Advisory</a>
+                            </div>
+                        </div>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                Services
+                            </a>
+                        
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow">
+                                <div class="container-fluid py-4">
+                                    <div class="row">
+
+                                        <div class="col-md-4 ps-5">
+                                            <img src="./img/newsletter.jpg" alt="" class="img-fluid">
+                                        </div>
+
+                                        <div class="col-md-2"></div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Corporate Advisory</h6>
+                                            <a href="./ma.html" class="dropdown-item ps-0">Mergers & Acquisitions Consulting</a>
+                                            <a href="./invest.html" class="dropdown-item ps-0">Investment Banking</a>
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Investment Solutions</h6>
+                                            <a href="./real.html" class="dropdown-item ps-0">Real Estate Syndication</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Alternative Assets Advisory</a>
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Strategic Services</h6>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Financial Advisory</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Strategic Advisory</a>
+                                        </div>
+                    
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="./legacy.html" class="nav-item nav-link">Legacy</a>
+                        <a href="./mission.html" class="nav-item nav-link">Mission</a>
+                        <a href="./team.html" class="nav-item nav-link">Team</a>
+                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <div class="container-fluid pb-5 hero-header mb-5">
+    
+    <video autoplay loop muted playsinline class="hero-video">
+        <source src="./banner/banner-2.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-overlay"></div>
+
+    <div class="container py-5 position-relative hero-content text-white mt-9">
+        <div class="row g-5 align-items-center mb-5">
+            <div class="col-lg-9">
+                <h1 class="display-1 mb-4 animated slideInRight text-white">Empowering Growth with Financial Solutions</h1>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div class="container-fluid pb-5 hero-header bg-light mb-5 d-none">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center mb-5">
+                <div class="col-lg-6">
+                    <h1 class="display-1 mb-4 animated slideInRight">We Make Your <span class="text-primary">Home</span>
+                        Better</h1>
+                    <h5 class="d-inline-block border border-2 border-white py-3 px-5 mb-0 animated slideInRight">
+                        An Award Winning Studio Since 1990</h5>
+                </div>
+                <div class="col-lg-6 d-none">
+                    <div class="owl-carousel header-carousel animated fadeIn">
+                        <img class="img-fluid" src="img/hero-slider-1.jpg" alt="">
+                        <img class="img-fluid" src="img/hero-slider-2.jpg" alt="">
+                        <img class="img-fluid" src="img/hero-slider-3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="row g-5 animated fadeIn d-none">
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
+                            <i class="fa fa-robot text-primary"></i>
+                        </div>
+                        <h5 class="lh-base mb-0">Crafted Furniture</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
+                            <i class="fa fa-robot text-primary"></i>
+                        </div>
+                        <h5 class="lh-base mb-0">Sustainable Material</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
+                            <i class="fa fa-robot text-primary"></i>
+                        </div>
+                        <h5 class="lh-base mb-0">Innovative Architects</h5>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="d-flex align-items-center">
+                        <div class="flex-shrink-0 btn-square border border-2 border-white me-3">
+                            <i class="fa fa-robot text-primary"></i>
+                        </div>
+                        <h5 class="lh-base mb-0">Budget Friendly</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+    <style>
+        /* Styling for Prominence */
+        .aum-container {
+            border-left: 3px solid #001233;
+            padding-left: 20px;
+        }
+    
+        .aum-highlight {
+            background: linear-gradient(135deg, #001233 0%, #03201f 100%);
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 12px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+    
+
+        .currency {
+            font-size: 1rem;
+            vertical-align: top;
+            margin-right: 2px;
+            font-weight: 300;
+        }
+    
+        .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+    
+        .unit {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-left: 5px;
+            font-weight: 400;
+        }
+    
+        .tracking-wider {
+            letter-spacing: 2px;
+            color: #001233;
+        }
+    
+    </style>
+    
+    <section class="section-padding bg-white pt-4 pb-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                    <h2 class="section-heading fs-4">Executive Summary</h2>
+                    <div class="purpose-border">
+                        <p class="text-muted mb-4" style="text-align: justify;">Corporate International Financial Services
+                            Limited (CIFSL) prides itself on having an outstanding team and an advisory board comprised of
+                            highly skilled professionals from a wide array of industries. These experts bring rich
+                            experience from sectors such as banking, real estate, green energy, and various other sectors.
+                            Established in 1995, CIFSL is a Category-I NBFC that specializes in asset-backed lending. The
+                            company is strategically expanding its loan portfolio into vibrant sectors like green energy,
+                            fintech, education and hospitality Pan India.</p>
+                    </div>
+    
+                    <div class="aum-container d-flex align-items-center mt-5">
+                        <div class="aum-highlight shadow-lg">
+                            <span class="currency">₹</span>
+                            <span class="amount">1200</span>
+                            <span class="unit">cr</span>
+                        </div>
+    
+                        <div class="aum-details ms-4">
+                            <h5 class="mb-0 fw-bold text-uppercase tracking-wider">Assets Under Management</h5>
+                            <p class="mb-0 text-muted small">Specializing since 25+ years</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="./banner/sum.jpg" alt="Aircraft" class="img-fluid w-100 shadow-lg rounded-1">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <style>
+        /* Main Card Styling */
+        .stat-card {
+            padding: 30px;
+            border-radius: 25px;
+            /* Matches the soft rounded corners in the image */
+            min-height: 150px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: none;
+            transition: transform 0.3s ease;
+        }
+    
+        /* Individual Card Backgrounds */
+        .card-white {
+            background-color: #ffffff;
+            border: 1px solid #e0e0e0;
+        }
+    
+        .card-light-purple {
+            background-color: #efeffa;
+            /* Light lavender tint */
+        }
+    
+        .card-blue {
+            background-color: #001233;
+            /* Soft blue from the image */
+        }
+    
+        /* Typography */
+        .stat-label {
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: #1a1a3d;
+            line-height: 1.3;
+        }
+    
+        .stat-number {
+            font-size: 2rem;
+            /* Large, bold numbers as seen in stats */
+            font-weight: 700;
+            color: #1a1a3d;
+            margin-bottom: 0;
+        }
+    
+        .stat-icon {
+            font-size: 1.5rem;
+            color: #1a1a3d;
+            opacity: 0.7;
+        }
+    
+        /* Interactive Effect */
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+    
+    <section class="metrics-section pt-0">
+        <div class="container my-5">
+            <h2 class="section-heading fs-4">Long Term Guidance on Financial Metrics</h2>
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-3">
+                    <div class="stat-card card-white">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <p class="stat-label">AUM Growth</p>
+                            
+                        </div>
+                        <h4 class="stat-number">20-40%</h4>
+                    </div>
+                </div>
+    
+    
+                <div class="col-md-3">
+                    <div class="stat-card card-blue">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <p class="stat-label text-white">GNPA</p>
+                           
+                        </div>
+                        <h2 class="stat-number text-white">1.0%</h2>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-card card-white">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <p class="stat-label">Profit Growth</p>
+                           
+                        </div>
+                        <h4 class="stat-number">25-30%</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="stat-card card-blue">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <p class="stat-label text-white">NNPA</p>
+                           
+                        </div>
+                        <h2 class="stat-number text-white">NNPA</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-navy">
+        <div class="container">
+            <h2 class="section-heading fs-4 text-white mb-3">FOCUS AREAS</h2>
+            <p class=" mb-5 w-100 text-white">
+                Targeting high-growth sectors with significant potential for value creation and market disruption. We focus on partnering with established middle-market enterprises and visionary leaders to accelerate expansion, optimize operational efficiency, and drive sustainable long-term returns.
+            </p>
+            <div class="focus-areas-grid">
+                <div class="focus-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <p>Space Infrastructure<br>& SSA</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <p>AI & Command<br>Infrastructure</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>Cybersecurity<br>& Trust Infrastructure</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-plane-up"></i>
+                    <p>Autonomous &<br>Unmanned Systems</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-industry"></i>
+                    <p>Advanced Materials &<br>Manufacturing</p>
+                </div>
+                
+                <div class="focus-card">
+                    <i class="fa-solid fa-atom"></i>
+                    <p>Quantum Computing<br>& Security</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-wave-square"></i>
+                    <p>Advanced<br>Communications</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <p>Strategic Energy<br>Systems</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <p>Semiconductors<br>& Edge Hardware</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-heading fs-4 mb-3">OUR KEY BUSINESS CAPABILITIES</h2>
+            <p class="text-muted mb-5 w-100">Delivering comprehensive financial solutions to navigate complex markets and drive institutional growth. We partner with clients to unlock value through strategic capital allocation, robust advisory, and targeted investments across key corporate and commercial sectors.</p>
+            
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-3">
+                    <img src="./banner/ma1.png" class="img-fluid w-100 mb-3" alt="Aerospace">
+                    <h5 class="fs-6 fw-bold text-center">Mergers & Acquisitions (M&A)</h5>
+                </div>
+                <div class="col-md-3">
+                    <img src="./banner/Frame 2.png" class="img-fluid w-100 mb-3" alt="Dual-Use">
+                    <h5 class="fs-6 fw-bold text-center">Real Estate Syndication</h5>
+                </div>
+                <div class="col-md-3">
+                    <img src="./banner/Frame 1.png" class="img-fluid w-100 mb-3" alt="Energy">
+                    <h5 class="fs-6 fw-bold text-center">Investment Banking</h5>
+                </div>
+                <div class="col-md-3">
+                    <img src="./banner/fs1.png" class="img-fluid w-100 mb-3" alt="Energy">
+                    <h5 class="fs-6 fw-bold text-center">Financial & Strategic Advisory</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-navy text-white">
+        <div class="container">
+            <h2 class="section-heading fs-4 text-white">OUR CORE PILLARS</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-3">
+                    <div class="feature-img-container">
+                        <img src="./banner/New folder/niche.webp" alt="Top Tech">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">Niche Financial Products</h4>
+                    <p class="small text-light opacity-75">Identify and offer specialized financial products that cater to specific customer segments, addressing their unique needs & supporting their financial goals.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-img-container">
+                        <img src="./banner/New folder/expert.webp" alt="Partners">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">Experienced Management Team</h4>
+                    <p class="small text-light opacity-75">Having a strong and experienced management team with a deep understanding of the financial industry has been helping us to drive strategic decision-making and navigate challenges effectively.</p>
+                </div>
+                <div class="col-md-3">
+                    <div class="feature-img-container">
+                        <img src="./banner/New folder/sme.webp" alt="Operators">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">
+                    SME and MSME Financing</h4>
+                    <p class="small text-light opacity-75">NBFCs can play a crucial role in supporting Small and Medium Enterprises (SMEs) and Micro, Small, and Medium Enterprises (MSMEs) by offering working capital loans, machinery financing, and trade finance services.</p>
+                </div> 
+                <div class="col-md-3">
+                    <div class="feature-img-container">
+                        <img src="./banner/New folder/complinace.webp" alt="Top Tech">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">
+                    Regulatroy Compliance</h4>
+                    <p class="small text-light opacity-75">Complying with regulatory requirements and having a good reputation for adhering to ethical business practices enhances the credibility and trustworthiness of our company.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+    <!-- About Start -->
+    <div class="container-fluid py-5 d-none">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.1s">
+                            <img class="img-fluid" src="img/about-1.jpg" alt="">
+                        </div>
+                        <div class="col-6 wow fadeIn" data-wow-delay="0.3s">
+                            <img class="img-fluid h-75" src="img/about-2.jpg" alt="">
+                            <div class="h-25 d-flex align-items-center text-center bg-primary px-4">
+                                <h4 class="text-white lh-base mb-0">Award Winning Studio Since 1990</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <h1 class="mb-5"><span class="text-uppercase text-primary bg-light px-2">History</span> of Our
+                        Creation</h1>
+                    <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-5">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no
+                        labore lorem sit. Sanctus clita duo justo et tempor.</p>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>Award Winning</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Professional Staff</h6>
+                        </div>
+                        <div class="col-sm-6">
+                            <h6 class="mb-3"><i class="fa fa-check text-primary me-2"></i>24/7 Support</h6>
+                            <h6 class="mb-0"><i class="fa fa-check text-primary me-2"></i>Fair Prices</h6>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mt-5">
+                        <a class="btn btn-primary px-4 me-2" href="#!">Read More</a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2" href="#!"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+
+    <!-- Feature Start -->
+    <div class="container-fluid py-5 d-none">
+        <div class="container">
+            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
+                <h1 class="mb-5">Why People <span class="text-uppercase text-primary bg-light px-2">Choose Us</span>
+                </h1>
+            </div>
+            <div class="row g-5 align-items-center text-center">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-calendar-alt fa-5x text-primary mb-4"></i>
+                    <h4>25+ Years Experience</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-tasks fa-5x text-primary mb-4"></i>
+                    <h4>Best Interior Design</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-pencil-ruler fa-5x text-primary mb-4"></i>
+                    <h4>Innovative Architects</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <i class="fa fa-user fa-5x text-primary mb-4"></i>
+                    <h4>Customer Satisfaction</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                    <i class="fa fa-hand-holding-usd fa-5x text-primary mb-4"></i>
+                    <h4>Budget Friendly</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                    <i class="fa fa-check fa-5x text-primary mb-4"></i>
+                    <h4>Sustainable Material</h4>
+                    <p class="mb-0">Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus clita duo
+                        justo et tempor eirmod magna dolore erat amet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Feature End -->
+
+
+    <!-- Project Start -->
+    <div class="container-fluid mt-5 d-none">
+        <div class="container mt-5">
+            <div class="row g-0">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="d-flex flex-column justify-content-center bg-primary h-100 p-5">
+                        <h1 class="text-white mb-5">Our Latest <span
+                                class="text-uppercase text-primary bg-light px-2">Projects</span></h1>
+                        <h4 class="text-white mb-0"><span class="display-1">6</span> of our latest projects</h4>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-0">
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.2s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-1.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Kitchen</h4>
+                                    <small class="text-white">72 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-2.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Bathroom</h4>
+                                    <small class="text-white">67 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-3.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Bedroom</h4>
+                                    <small class="text-white">53 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-4.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Living Room</h4>
+                                    <small class="text-white">33 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-5.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Furniture</h4>
+                                    <small class="text-white">87 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.7s">
+                            <div class="project-item position-relative overflow-hidden">
+                                <img class="img-fluid w-100" src="img/project-6.jpg" alt="">
+                                <a class="project-overlay text-decoration-none" href="#!">
+                                    <h4 class="text-white">Rennovation</h4>
+                                    <small class="text-white">69 Projects</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Project End -->
+
+
+    <!-- Service Start -->
+    <div class="container-fluid py-5 d-none">
+        <div class="container py-5">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeIn" data-wow-delay="0.1s">
+                    <h1 class="mb-5">Our Creative <span
+                            class="text-uppercase text-primary bg-light px-2">Services</span></h1>
+                    <p>Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <p class="mb-5">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor eirmod magna dolore erat amet</p>
+                    <div class="d-flex align-items-center bg-light">
+                        <div class="btn-square flex-shrink-0 bg-primary" style="width: 100px; height: 100px;">
+                            <i class="fa fa-phone fa-2x text-white"></i>
+                        </div>
+                        <div class="px-3">
+                            <h3>+0123456789</h3>
+                            <span>Call us direct 24/7 for get a free consultation</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="row g-0">
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.2s">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
+                                <a href="#!" class="service-img position-relative mb-4">
+                                    <img class="img-fluid w-100" src="img/service-1.jpg" alt="">
+                                    <h3>Interior Design</h3>
+                                </a>
+                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
+                                    stet diam sed stet lorem.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.4s">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                                <a href="#!" class="service-img position-relative mb-4">
+                                    <img class="img-fluid w-100" src="img/service-2.jpg" alt="">
+                                    <h3>Implement</h3>
+                                </a>
+                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
+                                    stet diam sed stet lorem.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.6s">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-light">
+                                <a href="#!" class="service-img position-relative mb-4">
+                                    <img class="img-fluid w-100" src="img/service-3.jpg" alt="">
+                                    <h3>Renovation</h3>
+                                </a>
+                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
+                                    stet diam sed stet lorem.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 wow fadeIn" data-wow-delay="0.8s">
+                            <div class="service-item h-100 d-flex flex-column justify-content-center bg-primary">
+                                <a href="#!" class="service-img position-relative mb-4">
+                                    <img class="img-fluid w-100" src="img/service-4.jpg" alt="">
+                                    <h3>Commercial</h3>
+                                </a>
+                                <p class="mb-0">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam
+                                    stet diam sed stet lorem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Team Start -->
+    <div class="container-fluid bg-light py-5 d-none">
+        <div class="container py-5">
+            <h1 class="mb-5">Our Professional <span class="text-uppercase text-primary bg-light px-2">Designers</span>
+            </h1>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-1.jpg" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">Architect</small>
+                            <h4 class="lh-base text-light">Boris Johnson</h4>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-2.jpg" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">Architect</small>
+                            <h4 class="lh-base text-light">Donald Pakura</h4>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-3.jpg" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">Architect</small>
+                            <h4 class="lh-base text-light">Bradley Gordon</h4>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
+                    <div class="team-item position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="img/team-4.jpg" alt="">
+                        <div class="team-overlay">
+                            <small class="mb-2">Architect</small>
+                            <h4 class="lh-base text-light">Alexander Bell</h4>
+                            <div class="d-flex justify-content-center">
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a class="btn btn-outline-primary btn-sm-square border-2 me-2" href="#!">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5 ">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-md-12 col-lg-9">
+                    <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.2s">
+                        <div class="testimonial-item">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-text pb-5 pb-md-0">
+                                        <h3>Corporate Transaction Advisory</h3>
+                                        <p>Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
+                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
+                                            dolore erat
+                                            amet</p>
+                                        <h5 class="mb-0">Boris Johnson</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-text pb-5 pb-md-0">
+                                        <h3>Business Transformation & 
+Management Consulting</h3>
+                                        <p>Clita erat ipsum et lorem et sit, sed
+                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
+                                            dolore erat
+                                            amet</p>
+                                        <h5 class="mb-0">Alexander Bell</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-item">
+                            <div class="row g-5 align-items-center">
+                                <div class="col-md-6">
+                                    <div class="testimonial-img">
+                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="testimonial-text pb-5 pb-md-0">
+                                        <h3>Differentiating by Offering
+Superior Customer Value.</h3>
+                                        <p>Diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
+                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
+                                            dolore erat
+                                            amet</p>
+                                        <h5 class="mb-0">Bradley Gordon</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- Newsletter Start -->
+    <div class="container-fluid bg-primary newsletter p-0 d-none">
+        <div class="container p-0">
+            <div class="row g-0 align-items-center">
+                <div class="col-md-5 ps-lg-0 text-start wow fadeIn" data-wow-delay="0.2s">
+                    <img class="img-fluid w-100" src="img/newsletter.jpg" alt="">
+                </div>
+                <div class="col-md-7 py-5 newsletter-text wow fadeIn" data-wow-delay="0.5s">
+                    <div class="p-5">
+                        <h1 class="mb-5">Subscribe the <span
+                                class="text-uppercase text-primary bg-white px-2">Newsletter</span></h1>
+                        <div class="position-relative w-100 mb-2">
+                            <input class="form-control border-0 w-100 ps-4 pe-5" type="text"
+                                placeholder="Enter Your Email" style="height: 60px;">
+                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-2 me-2"><i
+                                    class="fa fa-paper-plane text-primary fs-4"></i></button>
+                        </div>
+                        <p class="mb-0">Diam sed sed dolor stet amet eirmod</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Newsletter End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <img src="./banner/cifls-logo-light.svg" alt="" style="height: 6rem;">
+                    <a href="index.html" class="d-inline-block mb-3 d-none">
+                        <h1 class="text-white">iSTUDIO</h1>
+                    </a>
+                    <p class="mb-0 d-none">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>F.No. B1-1001, Sector-B, Pocket-1,
+                    Vasant Kunj New Delhi - 110070.</p>
+                    <p class="d-none"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@cifsl.in</p>
+                    <div class="d-flex pt-2 d-none">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn d-none" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="#!">About Us</a>
+                    <a class="btn btn-link" href="#!">Contact Us</a>
+                    <a class="btn btn-link" href="#!">Privacy Policy</a>
+                    <a class="btn btn-link" href="#!">Terms & Condition</a>
+                    <a class="btn btn-link" href="#!">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Services</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-link" href="#!">Mergers & Acquisitions (M&A)</a>
+                    <a class="btn btn-link" href="#!">Real Estate Syndication</a>
+                    <a class="btn btn-link" href="#!" style="text-wrap: nowrap;">Corporate Transaction Advisory</a>
+                        </div>
+                        <div class="col-md-6">
+                             <a class="btn btn-link" href="#!">Investment Banking</a>
+                    <a class="btn btn-link" href="#!">Financial & Strategic Advisory</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="" href="#">2023 All Rights Reserved To CIFSL</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <!-- <a href="#!">Home</a> -->
+                            <a href="#!">Disclaimer</a>
+                            <a href="#!">Privacy Policy</a>
+                            <!-- <a href="#!">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-lg-square back-to-top rounded-1" style="background-color: #0dcaf0 !important; color: #fff;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

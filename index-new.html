@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIFSL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .bg-navy {
+            background-color: #002442;
+        }
+        
+        .text-navy {
+            color: #002442;
+        }
+
+        /* Navbar Styling */
+        .navbar-brand {
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-size: 1.2rem;
+        }
+        .nav-link {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 500;
+            color: #555 !important;
+            margin-left: 15px;
+        }
+        .nav-link:hover {
+            color: #000 !important;
+        }
+
+
+        /* Section Spacing */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Purpose Section Customizations */
+        .purpose-border {
+            border-left: 3px solid #000;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .section-heading {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Feature Cards (Dark Section) */
+        .feature-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .feature-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dark-card-subtitle {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Focus Areas Grid */
+        .focus-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 1200px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .focus-card {
+            background-color: white;
+            padding: 30px 15px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .focus-card i {
+            font-size: 2.5rem;
+            color: #0b1528;
+            margin-bottom: 15px;
+        }
+        .focus-card p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 border-bottom sticky-top d-none">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="fa-solid fa-circle-nodes text-primary me-2"></i> 
+                INDUSBRIDGE VENTURES
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Thesis</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Investors</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Startups</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">I2A Launchpad</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero-section d-none">
+        <div class="container">
+            <h1 class="hero-title">BUILDING CROSS-BORDER<br>TECHNOLOGY VENTURES AT SCALE</h1>
+            <p class="hero-subtitle">Commercializing game-changing technologies,<br>in strategic sectors of national importance.</p>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+                    <h2 class="section-heading fs-4">OUR PURPOSE</h2>
+                    <div class="purpose-border">
+                        <p class="text-muted mb-4">We fuel transformative change by investing in visionary entrepreneurs and commercializing path-breaking technologies from the world's leading innovation ecosystems, with a high potential to disrupt and redefine strategic sectors of critical national importance.</p>
+                        <p class="text-muted mb-0">Together we build globally competitive ventures to deliver these innovations at optimal cost, impact and scale, while generating superior returns for our investors.</p>
+                    </div>
+                    <p class="text-muted mb-4 fs-6">In the process we help address critical challenges, technology gaps in national security and mission capability, through cross-border collaboration and innovation.</p>
+                    
+                    <div>
+                        <a href="#" class="btn btn-outline-dark px-4 py-2 me-2 rounded-0">Learn More</a>
+                        <a href="#" class="btn btn-dark px-4 py-2 rounded-0">Speak with us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <img src="https://placehold.co/800x500/0b1528/fff?text=Futuristic+Aircraft+Placeholder" alt="Aircraft" class="img-fluid w-100 shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-navy text-white">
+        <div class="container">
+            <h2 class="section-heading fs-4 text-white">GLOBALLY COMPETITIVE COMPANIES FOR THE FUTURE</h2>
+            <div class="row g-4 mt-3">
+                <div class="col-md-4">
+                    <div class="feature-img-container">
+                        <img src="https://placehold.co/600x400/222/fff?text=Rocket+Launch" alt="Partners">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">PARTNERS FOR THE LONG HAUL</h4>
+                    <h5 class="fw-bold fs-6">We find, fund, and scale.</h5>
+                    <p class="small text-light opacity-75">We're dedicated partners, supporting our companies from early-stage to cross-border growth and successful exits.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-img-container">
+                        <img src="https://placehold.co/600x400/222/fff?text=Rowing+Team" alt="Operators">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">OPERATORS WHO ROLL UP THEIR SLEEVES</h4>
+                    <h5 class="fw-bold fs-6">We're venture builders and growth catalysts</h5>
+                    <p class="small text-light opacity-75">We look beyond investing, seasoned operators with a hands-on approach, global execution and scale-up experience with a clear focus on building the next generation of emerging technology companies in high priority sectors.</p>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-img-container">
+                        <img src="https://placehold.co/600x400/222/fff?text=Snowy+Mountains" alt="Top Tech">
+                    </div>
+                    <h4 class="dark-card-subtitle text-info">ACCESS TO TOP 1% TECH</h4>
+                    <h5 class="fw-bold fs-6">Unparalleled access to dual-use technology.</h5>
+                    <p class="small text-light opacity-75">We make highly selective investments and partner with companies with critical emerging, field-proven technology at the inflection point of growth.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-white">
+        <div class="container">
+            <h2 class="section-heading fs-4 mb-3">WHAT WE LOOK FOR</h2>
+            <p class="text-muted mb-5 w-75">Addressing trillion dollar segments with path-breaking innovation and opportunities to scale via an India-centric low-cost co-development and manufacturing model. We invest in mission-critical technologies with dual-use applications, for national security and strategic self-reliance.</p>
+            
+            <div class="row g-4 text-center text-md-start">
+                <div class="col-md-4">
+                    <img src="https://placehold.co/600x400/ddd/555?text=Aerospace+&+Defence" class="img-fluid w-100 mb-3" alt="Aerospace">
+                    <h5 class="fs-6 fw-bold">Aerospace & Defence</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://placehold.co/600x400/ddd/555?text=Dual-Use+&+Deep+Tech" class="img-fluid w-100 mb-3" alt="Dual-Use">
+                    <h5 class="fs-6 fw-bold">Dual-Use & Deep Tech</h5>
+                </div>
+                <div class="col-md-4">
+                    <img src="https://placehold.co/600x400/ddd/555?text=Energy,+Infra+&+Mobility" class="img-fluid w-100 mb-3" alt="Energy">
+                    <h5 class="fs-6 fw-bold">Energy, Infra & Mobility Transition</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding bg-navy">
+        <div class="container">
+            <h2 class="section-heading fs-4 text-white mb-5">FOCUS AREAS</h2>
+            
+            <div class="focus-areas-grid">
+                <div class="focus-card">
+                    <i class="fa-solid fa-network-wired"></i>
+                    <p>Defense<br>& Deep Tech</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-rocket"></i>
+                    <p>Space Infrastructure<br>& SSA</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-brain"></i>
+                    <p>AI & Command<br>Infrastructure</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <p>Cybersecurity<br>& Trust Infrastructure</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-plane-up"></i>
+                    <p>Autonomous &<br>Unmanned Systems</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-industry"></i>
+                    <p>Advanced Materials &<br>Manufacturing</p>
+                </div>
+                
+                <div class="focus-card">
+                    <i class="fa-solid fa-atom"></i>
+                    <p>Quantum Computing<br>& Security</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-wave-square"></i>
+                    <p>Advanced<br>Communications</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <p>Strategic Energy<br>Systems</p>
+                </div>
+                <div class="focus-card">
+                    <i class="fa-solid fa-microchip"></i>
+                    <p>Semiconductors<br>& Edge Hardware</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

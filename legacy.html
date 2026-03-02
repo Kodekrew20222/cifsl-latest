@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CIFSL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .bg-navy {
+            background-color: #002442;
+        }
+        
+        .text-navy {
+            color: #002442;
+        }
+
+        /* Section Spacing */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Purpose Section Customizations */
+        .purpose-border {
+            border-left: 3px solid #000;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .section-heading {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Feature Cards (Dark Section) */
+        .feature-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .feature-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dark-card-subtitle {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Focus Areas Grid */
+        .focus-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 1200px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .focus-card {
+            background-color: white;
+            padding: 30px 15px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .focus-card i {
+            font-size: 2.5rem;
+            color: #0b1528;
+            margin-bottom: 15px;
+        }
+        .focus-card p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Custom Styles for the Metrics Section */
+        .metrics-section {
+            padding: 60px 0;
+            background-color: #ffffff; /* Clean white background */
+            font-family: Arial, sans-serif;
+        }
+        
+        .metrics-title {
+            color: #03201f; /* Dark teal color for heading */
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        
+        .stat-value {
+            color: #0dcaf0 !important; /* Light cyan/teal color for numbers */
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #6c757d ; /* Muted gray for text below numbers */
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-5 bg-dark">
+        <div class="container-fluid px-5">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img src="./banner/cifls-logo-light.svg" alt="" class="img-fluid log" style="height: 4rem;">
+                <a href="index.html" class="navbar-brand" style="visibility: hidden;">
+                    <h1>iSTUDIO</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+                        <div class="nav-item dropdown d-none">
+                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="./ma.html" class="dropdown-item">Mergers & Acquisitions (M&A) Consulting</a>
+                                <a href="./real.html" class="dropdown-item">Real Estate Syndication & Alternative Assets Advisory</a>
+                                <a href="./invest.html" class="dropdown-item">Investment Banking</a>
+                                <a href="./finance.html" class="dropdown-item">Financial & Strategic Advisory</a>
+                            </div>
+                        </div>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                                Services
+                            </a>
+                        
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow">
+                                <div class="container-fluid py-4">
+                                    <div class="row">
+
+                                        <div class="col-md-4 ps-5">
+                                            <img src="./img/newsletter.jpg" alt="" class="img-fluid">
+                                        </div>
+
+                                        <div class="col-md-2"></div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Corporate Advisory</h6>
+                                            <a href="./ma.html" class="dropdown-item ps-0">Mergers & Acquisitions Consulting</a>
+                                            <a href="./invest.html" class="dropdown-item ps-0">Investment Banking</a>
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Investment Solutions</h6>
+                                            <a href="./real.html" class="dropdown-item ps-0">Real Estate Syndication</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Alternative Assets Advisory</a>
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Strategic Services</h6>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Financial Advisory</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Strategic Advisory</a>
+                                        </div>
+                    
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="./legacy.html" class="nav-item nav-link">Legacy</a>
+                        <a href="./mission.html" class="nav-item nav-link">Mission</a>
+                        <a href="./team.html" class="nav-item nav-link">Team</a>
+                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <style>
+    .returns-section {
+        background-color: #001233; /* Deep navy blue background */
+        color: #ffffff;
+        font-family: 'Montserrat', sans-serif; /* Recommended font for this style */
+    }
+
+    .display-title {
+        font-weight: 400;
+        letter-spacing: 4px;
+        line-height: 1.3;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        width: 620px;
+    }
+
+    .accent-line {
+        width: 100%;
+        height: 1px;
+        background-color: rgba(255, 255, 255, 0.5);
+        margin-top: 30px;
+    }
+
+    .description-text p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.9);
+    }
+
+    @media (max-width: 991px) {
+        .display-title {
+            font-size: 1.8rem;
+        }
+    }
+</style>
+
+
+    <section class="returns-section py-5">
+    <div class="container py-lg-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0">
+                <h1 class="display-title text-white">
+                    A Foundation of Trust <br> 25+ years of Excellence
+                </h1>
+                <div class="accent-line"></div>
+            </div>
+
+            <div class="col-lg-5 offset-lg-1">
+                <div class="description-text">
+                    <p>Our legacy is defined by a steadfast commitment to integrity, innovation, and the long-term success of our partners. Established on a foundation of deep industry expertise, we have navigated decades of shifting market landscapes by remaining true to our core values.</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <style>
+    .outcomes-section {
+        background-color: #ffffff;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .outcomes-image {
+        height: 100%;
+        min-height: 500px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .outcomes-content {
+        padding: 80px 10%;
+    }
+
+    .section-title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        margin-bottom: 40px;
+        color: #000;
+    }
+
+    .outcome-item {
+        margin-bottom: 25px;
+    }
+
+    .outcome-item p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #333;
+        margin-bottom: 0;
+    }
+
+    .outcome-item strong {
+        font-weight: 700;
+        color: #000;
+        display: block; /* Makes the title sit above text like the image */
+        margin-bottom: 5px;
+    }
+
+    @media (max-width: 991px) {
+        .outcomes-content {
+            padding: 60px 5%;
+        }
+    }
+</style>
+
+    <section class="outcomes-section">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="outcomes-image" style="background-image: url('./banner/legacy.jpg');"></div>
+                </div>
+    
+                <div class="col-lg-6">
+                    <div class="outcomes-content">
+                        <h2 class="section-title">Delivering Strong Outcomes</h2>
+    
+                        <div class="outcome-item">
+                            <p>CIFSL has established itself as a robust entity within the financial sector, primarily
+                                focusing on real estate and wholesale debt financing for over 25 years. Recognizing the
+                                dynamic shifts in the global financial landscape and the increasing demand for innovative
+                                financial solutions, we are excited to announce our strategic diversification plan aimed at
+                                enhancing our portfolio and offering more value to our stakeholders.
+                            </p>
+                        </div>
+    
+                        <div class="outcome-item">
+                            <p>At CIFSL, we envision a future where financial empowerment knows no bounds. By
+                                revolutionizing the financial landscape through innovation and sustainable practices, we aim
+                                to bridge the credit gap and enable underserved sectors to flourish. Our vision extends
+                                beyond mere access to financial resources; we aspire to create a world where start-ups and
+                                businesses have the tools they need. Through our unwavering commitment to raising funds for
+                                social responsibility and environmental sustainability, we strive to pave the way for a
+                                brighter future filled with endless possibilities. By extending our resources to the MSME
+                                sector and championing green energy initiatives, we will ensure that the path to financial
+                                empowerment is not only accessible but also sustainable, transforming lives and communities
+                                for generations to come.
+    
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="outcomes-section">
+        <div class="container-fluid p-0">
+            <div class="row g-0 flex-row-reverse">
+                <div class="col-lg-6 d-none d-lg-block">
+                    <div class="outcomes-image" style="background-image: url('./banner/legacy2.jpg');"></div>
+                </div>
+    
+                <div class="col-lg-6">
+                    <div class="outcomes-content">
+                        <h2 class="section-title">Current Portfolio Strengths:</h2>
+    
+                        <div class="outcome-item">
+                            <p>Real Estate Financing: A strong portfolio of real estate financing, providing stable and secure returns over the years through Wholesale Debt products catering to various real estate opportunities, underpinned by a core team with a rigorous risk assessment and management capability.
+    
+                            </p>
+                        </div>
+
+                        <h2 class="section-title">Future Roadmap:</h2>
+    
+                        <div class="outcome-item">
+                            <ul class="list-unstyled">
+                                <li class="mb-2">
+                                    <strong>Fintech Ventures:</strong> Leveraging cutting-edge technology to deliver seamless digital lending,
+                                    payment solutions, and blockchain-based financial empowerment.
+                                </li>
+                        
+                                <li class="mb-2">
+                                    <strong>AI-Venture:</strong> Investing strategically in AI innovation to empower startups and businesses for
+                                    exponential growth in the digital landscape.
+                                </li>
+                        
+                                <li class="mb-2">
+                                    <strong>Food & Entertainment:</strong> Partnering with innovative ventures to bolster economic growth and
+                                    enrich community life through cultural and social experiences.
+                                </li>
+                        
+                                <li class="mb-2">
+                                    <strong>Green Energy:</strong> Supporting renewable projects in solar, wind, and hydrogen to drive
+                                    environmental sustainability and mitigate climate change.
+                                </li>
+                        
+                                <li class="mb-2">
+                                    <strong>Education Loans:</strong> Providing tailored, affordable financing for traditional degrees and
+                                    professional upskilling to ensure global educational accessibility.
+                                </li>
+                            </ul>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <img src="./banner/cifls-logo-light.svg" alt="" style="height: 6rem;">
+                    <a href="index.html" class="d-inline-block mb-3 d-none">
+                        <h1 class="text-white">iSTUDIO</h1>
+                    </a>
+                    <p class="mb-0 d-none">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>F.No. B1-1001, Sector-B, Pocket-1,
+                    Vasant Kunj New Delhi - 110070.</p>
+                    <p class="d-none"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@cifsl.in</p>
+                    <div class="d-flex pt-2 d-none">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn d-none" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="#!">About Us</a>
+                    <a class="btn btn-link" href="#!">Contact Us</a>
+                    <a class="btn btn-link" href="#!">Privacy Policy</a>
+                    <a class="btn btn-link" href="#!">Terms & Condition</a>
+                    <a class="btn btn-link" href="#!">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Services</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-link" href="#!">Mergers & Acquisitions (M&A)</a>
+                    <a class="btn btn-link" href="#!">Real Estate Syndication</a>
+                    <a class="btn btn-link" href="#!" style="text-wrap: nowrap;">Corporate Transaction Advisory</a>
+                        </div>
+                        <div class="col-md-6">
+                             <a class="btn btn-link" href="#!">Investment Banking</a>
+                    <a class="btn btn-link" href="#!">Financial & Strategic Advisory</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="" href="#">2023 All Rights Reserved To CIFSL</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <!-- <a href="#!">Home</a> -->
+                            <a href="#!">Disclaimer</a>
+                            <a href="#!">Privacy Policy</a>
+                            <!-- <a href="#!">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-lg-square back-to-top rounded-1" style="background-color: #0dcaf0 !important; color: #fff;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
