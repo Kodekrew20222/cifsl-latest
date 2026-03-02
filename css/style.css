@@ -91,6 +91,7 @@
 .navbar .dropdown-menu .dropdown-item.active {
     color: var(--bs-white);
     background: var(--bs-primary);
+    padding-left: 10px !important;
 }
 
 .navbar .dropdown-menu {
@@ -459,7 +460,7 @@
 /*** Footer ***/
 .footer .btn.btn-link {
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 0;
     text-align: left;
     color: rgba(255,255,255,.5);

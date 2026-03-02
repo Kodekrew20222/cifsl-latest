@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CIFSL</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Space+Grotesk&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .bg-navy {
+            background-color: #002442;
+        }
+        
+        .text-navy {
+            color: #002442;
+        }
+
+        /* Section Spacing */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        /* Purpose Section Customizations */
+        .purpose-border {
+            border-left: 3px solid #000;
+            padding-left: 20px;
+            margin-bottom: 25px;
+        }
+        
+        .section-heading {
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        /* Feature Cards (Dark Section) */
+        .feature-img-container {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .feature-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dark-card-subtitle {
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Focus Areas Grid */
+        .focus-areas-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+        @media (max-width: 1200px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        @media (max-width: 768px) {
+            .focus-areas-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        .focus-card {
+            background-color: white;
+            padding: 30px 15px;
+            text-align: center;
+            height: 100%;
+            transition: transform 0.3s ease;
+        }
+        .focus-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .focus-card i {
+            font-size: 2.5rem;
+            color: #0b1528;
+            margin-bottom: 15px;
+        }
+        .focus-card p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0;
+        }
+
+        /* Custom Styles for the Metrics Section */
+        .metrics-section {
+            padding: 60px 0;
+            background-color: #ffffff; /* Clean white background */
+            font-family: Arial, sans-serif;
+        }
+        
+        .metrics-title {
+            color: #03201f; /* Dark teal color for heading */
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        
+        .stat-value {
+            color: #0dcaf0 !important; /* Light cyan/teal color for numbers */
+            font-weight: 700;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            color: #6c757d ; /* Muted gray for text below numbers */
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner"
+        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid sticky-top px-5 bg-dark">
+        <div class="container-fluid px-5">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <img src="./banner/cifls-logo-light.svg" alt="" class="img-fluid " style="height: 4rem;">
+                <a href="index.html" class="navbar-brand" style="visibility: hidden;">
+                    <h1>iSTUDIO</h1>
+                </a>
+                <button type="button" class="navbar-toggler ms-auto me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto">
+                        <a href="index.html" class="nav-item nav-link ">Home</a>
+                        <div class="nav-item dropdown d-none">
+                            <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                            <div class="dropdown-menu bg-light mt-2">
+                                <a href="./ma.html" class="dropdown-item">Mergers & Acquisitions (M&A) Consulting</a>
+                                <a href="./real.html" class="dropdown-item">Real Estate Syndication & Financial & Strategic Advisory</a>
+                                <a href="./invest.html" class="dropdown-item">Investment Banking</a>
+                                <a href="./finance.html" class="dropdown-item">Financial & Strategic Advisory</a>
+                            </div>
+                        </div>
+                        <li class="nav-item dropdown position-static">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
+                                Services
+                            </a>
+                        
+                            <div class="dropdown-menu w-100 mt-0 border-0 shadow">
+                                <div class="container-fluid py-4">
+                                    <div class="row">
+
+                                        <div class="col-md-4 ps-5">
+                                            <img src="./img/newsletter.jpg" alt="" class="img-fluid">
+                                        </div>
+
+                                        <div class="col-md-3"></div>
+                        
+                                        <div class="col-md-3">
+                                            <h6 class="fw-bold">Corporate Advisory</h6>
+                                            <a href="./ma.html" class="dropdown-item ps-0 ">Mergers & Acquisitions (M&A) Consulting</a>
+                                            <a href="./invest.html" class="dropdown-item ps-0  active">Investment Banking</a>
+                                        </div>
+                        
+                                        <div class="col-md-2">
+                                            <h6 class="fw-bold">Investment Solutions</h6>
+                                            <a href="./real.html" class="dropdown-item ps-0 ">Real Estate Syndication</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Financial & Strategic Advisory</a>
+                                        </div>
+                        
+                                        <div class="col-md-2 d-none">
+                                            <h6 class="fw-bold">Strategic Services</h6>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Financial Advisory</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Strategic Advisory</a>
+                                        </div>
+                    
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <a href="./legacy.html" class="nav-item nav-link">Legacy</a>
+                        <a href="./mission.html" class="nav-item nav-link ">Mission</a>
+                        <a href="./team.html" class="nav-item nav-link">Team</a>
+                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+    <style>
+        .innovation-section {
+            background: linear-gradient(rgba(0, 40, 70, 0.0), rgba(0, 40, 70, 0)),
+                url('./banner/ib.webp') center/cover no-repeat;
+            background-position: center;
+            min-height: 350px;
+            padding: 80px 0;
+        }
+    
+        .content-box {
+            background: rgba(10, 45, 80, 0.85);
+            padding: 40px 50px;
+            max-width: 900px;
+            border-radius: 4px;
+        }
+    
+        .content-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 400;
+        }
+    </style>
+     
+    <section class="innovation-section d-flex align-items-center">
+        <div class="container">
+            <div class="content-box mx-auto">
+                <h2 class="section-heading fs-4 text-white">Investment Banking</h2>
+                <p class="mb-0 text-white">
+                    We provide comprehensive investment banking services to support businesses at every stage of growth. From capital raising and strategic advisory to mergers, acquisitions, and restructuring, our team delivers tailored financial solutions that maximize value, optimize capital structures, and drive long-term success.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        
+    
+        .program-section h3 {
+            font-size: 26px;
+        }
+    
+        .program-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .sub-head{
+            font-size: 18px !important;
+            font-weight: 400;
+        }
+    
+        @media (max-width: 991px) {
+            .border-start {
+                border-left: none !important;
+                border-top: 1px solid #ddd;
+                padding-top: 30px;
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+    <section class="program-section py-5">
+        <div class="container">
+            <h2 class="section-heading fs-4">Corporate Transaction Advisory</h2>
+            <p>
+                Transforming Private Enterprises into Public Market Leaders
+    
+                Going public is a transformative milestone that demands more than just financial success; it requires a
+                fundamental
+                shift in corporate governance, transparency, and operational discipline. At Corporate International
+                Financial
+                Services Limited, we act as the architects of your public listing journey. We do not just prepare you for
+                the
+                transaction; we prepare your organization for life as a listed entity.
+            </p>
+            <p>
+                Our role is to sit on your side of the table, acting as your strategic advocate to ensure that when you
+                approach the
+                market, your value is maximized, your compliance is impeccable, and your story is compelling.
+            </p>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">IPO Readiness & Governance Transformation</h2>
+    
+                    <p>
+                        Bridging the gap between private agility and public accountability.
+    
+                        Before a single document is filed with regulators, your organization must undergo a rigorous
+                        diagnostic to ensure it can withstand public scrutiny. We manage the "Private-to-Public" transition,
+                        ensuring no surprises arise during due diligence.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Gap Analysis & Diagnostics: </h2>
+                        <p>
+                            Conducting a comprehensive audit of your current financial reporting, secretarial records, and
+                            internal controls against SEBI (ICDR) and Stock Exchange listing norms.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Governance Framework Design:</h2>
+                        <p>
+                            Restructuring your Board composition, forming required committees (Audit, Remuneration), and
+                            drafting policies to meet Corporate Governance standards.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Financial Restatement Support:</h2>
+                        <p>
+                            Assisting your finance team in restating financial statements (as per IndAS) to ensure they meet
+                            the specific formats required for the Draft Red Herring Prospectus (DRHP).
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Compliance Health-Check: </h2>
+                        <p>
+                            Proactively identifying and fixing historical non-compliances in ROC filings, tax matters, or
+                            labor laws to ensure a "Clean Due Diligence" report.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">Capital Structuring & Valuation Strategy</h2>
+    
+                    <p>
+                        Designing a balance sheet that supports growth and maximizes shareholder value.
+    
+                        Determining how much to raise and at what valuation is a complex strategic decision. We provide the
+                        analytical rigor required to justify your valuation to investors and regulators.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Optimal Capital Mix:</h2>
+                        <p>
+                            Advising on the ideal ratio of Debt vs. Equity and Fresh Issue vs. Offer for Sale (OFS) to
+                            balance capital needs with promoter dilution.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Pre-IPO Placement Strategy:</h2>
+                        <p>
+                            Structuring pre-IPO funding rounds to set a valuation benchmark and bring in strategic marquee
+                            investors before the main listing.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Financial Modelling: </h2>
+                        <p>
+                            Building robust, multi-year financial projections that withstand the stress tests of merchant
+                            bankers and valuation analysts.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Cap Table Management: </h2>
+                        <p>
+                            Advising on the consolidation of shareholding, promoter grouping, and cleaning up the
+                            capitalization table to make it attractive for public investors.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Intermediary Selection & Project Management (PMO)</h2>
+    
+                    <p>
+                        Your strategic quarterback for the IPO process.
+    
+                        An IPO involves a consortium of external agencies. We act as your Project Management Office (PMO),
+                        coordinating this complex ecosystem so your management team can focus on running the business.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Vendor Selection:</h2>
+                        <p>
+                            Helping you identify, interview, and negotiate mandates with the right set of SEBI-registered
+                            Merchant Bankers, Legal Counsels, Registrars, and Market Makers suited to your industry and
+                            size.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Process Coordination: </h2>
+                        <p>
+                            Acting as the central liaison between your company and the appointed bankers/lawyers to ensure
+                            timely submission of data and smooth execution of the DRHP drafting process.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Timeline Management:</h2>
+                        <p>
+                            Creating and monitoring a critical path timeline to ensure the IPO is launched within the
+                            targeted market window.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Cost Rationalization: </h2>
+                        <p>
+                            Advising on the negotiation of fees and issue expenses to keep the cost of raising capital
+                            efficient.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Investor Relations (IR) & Equity Storytelling</h2>
+    
+                    <p>
+                        Crafting a narrative that resonates with the market.
+    
+                        Numbers tell only half the story. To attract institutional capital and retail interest, you need a
+                        compelling investment thesis. We help you articulate "Why Us?" to the world.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Investment Thesis Creation: </h2>
+                        <p>
+                            Crafting a sharp, compelling narrative that highlights your competitive advantage, growth moats,
+                            and future roadmap.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Collateral Preparation: </h2>
+                        <p>
+                            Designing high-impact Investor Presentation decks, Teasers, and FAQ documents for roadshows and
+                            analyst meets.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Management Coaching: </h2>
+                        <p>
+                            Grooming your leadership team (CEO/CFO) for "Roadshow Q&A" sessions, helping them communicate
+                            vision and handle difficult questions from fund managers with confidence.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Anchor Investor Strategy:</h2>
+                        <p>
+                            Strategizing on the profile of ideal Anchor Investors and institutional participants to target
+                            for the book-building process.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <section class="program-section py-5 pt-0">
+        <div class="container">
+            <h2 class="section-heading fs-4 mt-5">Capital Raising & Strategic Financial Advisory</h2>
+            <p class="mt-5">Capital is the fuel for growth. We ensure you get the right fuel, at the right price, on the right terms.
+
+            Raising capital—whether equity from VCs or debt from banks—is a full-time job that requires specialized financial articulation. A great business model often fails to raise funds because the financial narrative doesn't speak the language of the investor.</p>
+            <p>
+                At Corporate International Financial Services Limited, we act as your Financial Architects. We translate your business vision into "Bankable" and "Investable" propositions. We don't just hand you a report; we equip you with the financial logic, valuation defense, and structured data required to close deals confidently.
+            </p>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Investment Readiness: Pitch Decks & Valuation Strategy</h2>
+    
+                    <p>
+                        Turning your business vision into an institutional-grade investment thesis.
+
+                        Investors review hundreds of decks a week. To stand out, your pitch needs a compelling narrative backed by irrefutable financial logic. We prepare you to face the scrutiny of institutional investors.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Institutional-Grade Pitch Decks:  </h2>
+                        <p>
+                            We move beyond standard slides to craft a comprehensive Information Memorandum (IM). We articulate your "Equity Story"—highlighting market opportunity, competitive moats, unit economics, and scalability.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Financial Modeling & Scenario Analysis: </h2>
+                        <p>
+                            We build robust, dynamic financial models (3-5 year projections) that allow investors to toggle assumptions. We stress-test your revenue, margins, and cash flows to ensure your projections withstand due diligence.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Defensible Valuation Advisory: </h2>
+                        <p>
+                             Valuation is both an art and a science. We help you arrive at a justifiable pre-money valuation using multiple methodologies (DCF, Comparable Company Analysis, Precedent Transactions) so you don't leave money on the table during negotiations.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Data Room Preparation:  </h2>
+                        <p>
+                            We assist in organizing your virtual data room (VDR) with all necessary due diligence documents (legal, financial, compliance) to accelerate investor decision-making.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Private Equity (PE) & VC Deal Structuring</h2>
+    
+                    <p>
+                        Protecting your interests beyond the capital injection.
+
+                        The highest valuation isn't always the best deal. The fine print in a Term Sheet—liquidation preferences, anti-dilution clauses, and board control—can define your future exit. We act as your strategic sounding board during these critical negotiations.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Term Sheet Optimization: </h2>
+                        <p>
+                            We review Term Sheets from potential investors to identify "red flags" and restrictive covenants. We advise on commercial terms to ensure a fair balance between investor protection and founder autonomy.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Capital Table Strategy:  </h2>
+                        <p>
+                           We advise on the long-term impact of dilution. We model out how the current round affects future rounds (Series A, B) and the Founder’s eventual exit pie.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Instrument Selection:  </h2>
+                        <p>
+                            Advising on the right instrument for the raise—whether it should be straight Equity, Compulsory Convertible Preference Shares (CCPS), or Convertible Notes (CN)—based on your current stage and tax implications.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Shareholders’ Agreement (SHA) Advisory:</h2>
+                        <p>
+                            Working alongside legal counsels to ensure the commercial understanding of the deal is accurately reflected in the final definitive agreements.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Corporate Debt Consulting & Project Finance</h2>
+    
+                    <p>
+                        Speaking the language of Bankers and Credit Committees.
+
+                        Securing debt financing requires precise technical documentation. Banks do not fund "ideas"; they fund "risk-mitigated cash flows.We prepare the rigorous documentation required to pass credit committee approvals.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Detailed Project Reports (DPR): </h2>
+                        <p>
+                            For greenfield or expansion projects, we draft comprehensive DPRs covering Technical Feasibility and Economic Viability (TEV), market potential, and ROI analysis required for term loans.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">CMA Data Preparation: </h2>
+                        <p>
+                            We prepare the Credit Monitoring Arrangement (CMA) data in the specific formats mandated by RBI and lenders. This includes precise calculation of Maximum Permissible Bank Finance (MPBF), Drawing Power, and key ratios (DSCR, Current Ratio).
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Working Capital Assessment: </h2>
+                        <p>
+                            We analyze your operating cycle (Inventory, Debtors, Creditors) to scientifically justify your requirement for Cash Credit (CC) or Overdraft (OD) limits to the bank.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Lender Liaison Support:  </h2>
+                        <p>
+                            We assist management in answering technical queries raised by credit analysts and risk officers during the appraisal process, ensuring the proposal moves smoothly through approval stages.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            
+            
+        </div>
+    
+    </section>
+
+    <section class="program-section py-5 pt-0">
+        <div class="container">
+            <h2 class="section-heading fs-4 mt-5">Business Transformation & Management Consulting</h2>
+            
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Compliance Diagnostic & Risk Health-Checks</h2>
+    
+                    <p>
+                        Pre-empting risks before they become liabilities.
+
+                        Most compliance gaps are discovered too late—usually during a Due Diligence process by an investor or a notice from the authorities. We take a proactive approach, acting as your internal "Devil’s Advocate" to identify and fix issues before they escalate.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Pre-Due Diligence Reviews: </h2>
+                        <p>
+                            We conduct a "Mock Diligence" of your statutory records—simulating the scrutiny of an investor’s legal team. We review your historical filings to ensure your organization is "Transaction Ready" at all times.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">ROC & MCA Compliance Audit: </h2>
+                        <p>
+                            A comprehensive review of your Secretarial records, including Board Minutes, Annual Returns (MGT-7/AOC-4), and Share Certificates, to ensure they align perfectly with the Companies Act, 2013.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Taxation Health Check (GST & TDS): </h2>
+                        <p>
+                            We analyze your Indirect Tax (GST) and Direct Tax (TDS) workflows to identify gaps in reconciliation, input tax credit (ITC) mismatches, or deduction errors that could lead to future penalties.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Regulatory Rectification Advisory:  </h2>
+                        <p>
+                            If historical non-compliances are found, we advise on the most efficient compounding or amnesty schemes to regularize the company’s status with the Ministry of Corporate Affairs (MCA).
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+            <div class="row align-items-start mt-5">
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4"> Entity Structuring & Incorporation Advisory</h2>
+    
+                    <p>
+                        Building the right legal foundation for your vision.
+
+                        Choosing the right legal structure is the first step in business strategy. The wrong structure can stifle growth, complicate fundraising, or increase tax liability. We advise on the architecture of your business entity based on your long-term goals.
+                    </p>
+    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Business Structure Strategy:  </h2>
+                        <p>
+                            We evaluate your business model to recommend the optimal vehicle—Private Limited Company (for fundraising scalability), LLP (for tax efficiency and flexibility), or OPC (for solo entrepreneurs). We advise on the pros and cons of each regarding liability, tax, and compliance burden.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Joint Venture (JV) & SPV Advisory:   </h2>
+                        <p>
+                          For collaborative projects or specific asset acquisitions, we assist in structuring Special Purpose Vehicles (SPVs) and Joint Ventures, advising on equity splits, management control, and exit mechanisms.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Drafting Constitutional Documents:   </h2>
+                        <p>
+                            We assist in drafting and vetting the Memorandum of Association (MoA) and Articles of Association (AoA) to ensure they are broad enough to cover future business expansions (like your own MoA) and specific enough to protect shareholder interests.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Start-up Registration & Incentives:</h2>
+                        <p>
+                            Advising new entities on registering under the Startup India initiative to avail benefits such as tax holidays, self-certification, and IPR protection.
+                        </p>
+                    </div>
+    
+    
+                </div>
+    
+            </div>
+            
+        </div>
+    
+    </section>
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer pt-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+                    <img src="./banner/cifls-logo-light.svg" alt="" style="height: 6rem;">
+                    <a href="index.html" class="d-inline-block mb-3 d-none">
+                        <h1 class="text-white">iSTUDIO</h1>
+                    </a>
+                    <p class="mb-0 d-none">Tempor erat elitr rebum at clita. Diam dolor diam ipsum et tempor sit. Aliqu diam
+                        amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit. Sanctus
+                        clita duo justo et tempor</p>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
+                    <h5 class="text-white mb-4">Get In Touch</h5>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>F.No. B1-1001, Sector-B, Pocket-1,
+                    Vasant Kunj New Delhi - 110070.</p>
+                    <p class="d-none"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p><i class="fa fa-envelope me-3"></i>info@cifsl.in</p>
+                    <div class="d-flex pt-2 d-none">
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-primary btn-square border-2 me-2" href="#!"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3 wow fadeIn d-none" data-wow-delay="0.5s">
+                    <h5 class="text-white mb-4">Popular Link</h5>
+                    <a class="btn btn-link" href="#!">About Us</a>
+                    <a class="btn btn-link" href="#!">Contact Us</a>
+                    <a class="btn btn-link" href="#!">Privacy Policy</a>
+                    <a class="btn btn-link" href="#!">Terms & Condition</a>
+                    <a class="btn btn-link" href="#!">Career</a>
+                </div>
+                <div class="col-md-6 col-lg-5 wow fadeIn" data-wow-delay="0.7s">
+                    <h5 class="text-white mb-4">Our Services</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <a class="btn btn-link" href="./ma.html">Mergers & Acquisitions (M&A)</a>
+                    <a class="btn btn-link" href="./real.html">Real Estate Syndication</a>
+                        </div>
+                        <div class="col-md-6">
+                             <a class="btn btn-link" href="./invest.html">Investment Banking</a>
+                    <a class="btn btn-link" href="./finance.html">Financial & Strategic Advisory</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container wow fadeIn" data-wow-delay="0.1s">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="" href="#">2023 All Rights Reserved To CIFSL</a>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="footer-menu">
+                            <!-- <a href="#!">Home</a> -->
+                            <a href="./disclaimer.html">Disclaimer</a>
+                            <a href="./privacy.html">Privacy Policy</a>
+                            <!-- <a href="#!">FAQs</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#!" class="btn btn-lg btn-lg-square back-to-top rounded-1" style="background-color: #2471ff !important; color: #fff;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

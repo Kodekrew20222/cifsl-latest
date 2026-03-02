@@ -102,6 +102,7 @@
             text-align: center;
             height: 100%;
             transition: transform 0.3s ease;
+            border-radius: 6px;
         }
         .focus-card:hover {
             transform: translateY(-5px);
@@ -113,9 +114,9 @@
             margin-bottom: 15px;
         }
         .focus-card p {
-            font-size: 0.8rem;
+            font-size: 1rem;
             font-weight: 600;
-            margin: 0;
+            margin-bottom: 0;
         }
 
         /* Custom Styles for the Metrics Section */
@@ -184,7 +185,7 @@
                             <a href="#!" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                             <div class="dropdown-menu bg-light mt-2">
                                 <a href="./ma.html" class="dropdown-item">Mergers & Acquisitions (M&A) Consulting</a>
-                                <a href="./real.html" class="dropdown-item">Real Estate Syndication & Alternative Assets Advisory</a>
+                                <a href="./real.html" class="dropdown-item">Real Estate Syndication & Financial & Strategic Advisory</a>
                                 <a href="./invest.html" class="dropdown-item">Investment Banking</a>
                                 <a href="./finance.html" class="dropdown-item">Financial & Strategic Advisory</a>
                             </div>
@@ -202,9 +203,9 @@
                                             <img src="./img/newsletter.jpg" alt="" class="img-fluid">
                                         </div>
 
-                                        <div class="col-md-2"></div>
+                                        <div class="col-md-3"></div>
                         
-                                        <div class="col-md-2">
+                                        <div class="col-md-3">
                                             <h6 class="fw-bold">Corporate Advisory</h6>
                                             <a href="./ma.html" class="dropdown-item ps-0">Mergers & Acquisitions Consulting</a>
                                             <a href="./invest.html" class="dropdown-item ps-0">Investment Banking</a>
@@ -213,10 +214,10 @@
                                         <div class="col-md-2">
                                             <h6 class="fw-bold">Investment Solutions</h6>
                                             <a href="./real.html" class="dropdown-item ps-0">Real Estate Syndication</a>
-                                            <a href="./finance.html" class="dropdown-item ps-0">Alternative Assets Advisory</a>
+                                            <a href="./finance.html" class="dropdown-item ps-0">Financial & Strategic Advisory</a>
                                         </div>
                         
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 d-none">
                                             <h6 class="fw-bold">Strategic Services</h6>
                                             <a href="./finance.html" class="dropdown-item ps-0">Financial Advisory</a>
                                             <a href="./finance.html" class="dropdown-item ps-0">Strategic Advisory</a>
@@ -498,50 +499,106 @@
         </div>
     </section>
 
+    <style>
+        .focus-icon {
+            height: 6rem;
+        }
+    
+        /* Hide paragraph initially */
+        .focus-description {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.4s ease;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-top: 10px;
+            text-align: center;
+            padding: 0 10px;
+        }
+    
+        /* Show paragraph on hover */
+        .focus-card:hover .focus-description {
+            max-height: 200px;
+            opacity: 1;
+        }
+    
+        /* Optional subtle hover effect */
+        .focus-card:hover {
+            transform: translateY(-5px);
+        }
+    
+    </style>
+    
     <section class="section-padding bg-navy">
         <div class="container">
             <h2 class="section-heading fs-4 text-white mb-3">FOCUS AREAS</h2>
             <p class=" mb-5 w-100 text-white">
-                Targeting high-growth sectors with significant potential for value creation and market disruption. We focus on partnering with established middle-market enterprises and visionary leaders to accelerate expansion, optimize operational efficiency, and drive sustainable long-term returns.
+                Targeting high-growth sectors with significant potential for value creation and market disruption. We focus
+                on partnering with established middle-market enterprises and visionary leaders to accelerate expansion,
+                optimize operational efficiency, and drive sustainable long-term returns.
             </p>
             <div class="focus-areas-grid">
                 <div class="focus-card">
-                    <i class="fa-solid fa-rocket"></i>
-                    <p>Space Infrastructure<br>& SSA</p>
+                    <img src="./banner/icons/green.jpg" alt="" class="img-fluid focus-icon">
+                    <p>Green Energy</p>
+                    <p class="focus-description">
+                        Exploring funding opportunities for various innovative green energy projects
+                    </p>
                 </div>
                 <div class="focus-card">
-                    <i class="fa-solid fa-brain"></i>
-                    <p>AI & Command<br>Infrastructure</p>
+                    <img src="./banner/icons/healthcare.jpg" alt="" class="img-fluid focus-icon">
+                    <p>Healthcare</p>
+                    <p class="focus-description">
+                        Seeking alternative class of instruments for revolutionary healthcare specialists
+                    </p>
                 </div>
                 <div class="focus-card">
-                    <i class="fa-solid fa-shield-halved"></i>
-                    <p>Cybersecurity<br>& Trust Infrastructure</p>
+                    <img src="./banner/icons/hospttal.jpg" alt="" class="img-fluid focus-icon">
+                    <p>Hospitality</p>
+                    <p class="focus-description">
+                        Ideating various structured products to ensure sustained growth in the hospitality industry.
+                    </p>
                 </div>
                 <div class="focus-card">
-                    <i class="fa-solid fa-plane-up"></i>
-                    <p>Autonomous &<br>Unmanned Systems</p>
+                    <img src="./banner/icons/real.png" alt="" class="img-fluid focus-icon">
+                    <p>Real Estate</p>
+                    <p class="focus-description">
+                        Bridging the gap enabling to create niche projects in the commercial and
+                        residential space.
+                    </p>
                 </div>
                 <div class="focus-card">
-                    <i class="fa-solid fa-industry"></i>
-                    <p>Advanced Materials &<br>Manufacturing</p>
+                    <img src="./banner/icons/tech.png" alt="" class="img-fluid focus-icon">
+                    <p>Technology</p>
+                    <p class="focus-description">
+                        Innovativing financial products and services spanning across various industry verticles.
+                    </p>
                 </div>
-                
+    
                 <div class="focus-card">
-                    <i class="fa-solid fa-atom"></i>
-                    <p>Quantum Computing<br>& Security</p>
+                    <img src="./banner/icons/manufacture.png" alt="" class="img-fluid focus-icon">
+                    <p>Manufacturing</p>
+                    <p class="focus-description">
+                        Creating a vision aligned with dynamic transitions taking place in the manufacturing sector
+                    </p>
+                </div>
+    
+                <div class="focus-card">
+                    <img src="./banner/icons/ai.jpg" alt="" class="img-fluid focus-icon">
+                    <p>AI-Ventures</p>
+                    <p class="focus-description">
+                        Empowering start-ups & businesses for exponential growth in this field.
+                    </p>
                 </div>
                 <div class="focus-card">
-                    <i class="fa-solid fa-wave-square"></i>
-                    <p>Advanced<br>Communications</p>
+                    <img src="./banner/icons/education.jpg" alt="" class="img-fluid focus-icon">
+                    <p>Education</p>
+                    <p class="focus-description">
+                        Helping children realize their potential and take a defining step towards a brighter tomorrow
+                    </p>
                 </div>
-                <div class="focus-card">
-                    <i class="fa-solid fa-bolt"></i>
-                    <p>Strategic Energy<br>Systems</p>
-                </div>
-                <div class="focus-card">
-                    <i class="fa-solid fa-microchip"></i>
-                    <p>Semiconductors<br>& Edge Hardware</p>
-                </div>
+    
             </div>
         </div>
     </section>
@@ -553,20 +610,28 @@
             
             <div class="row g-4 text-center text-md-start">
                 <div class="col-md-3">
-                    <img src="./banner/ma1.png" class="img-fluid w-100 mb-3" alt="Aerospace">
+                    <a href="./ma.html">
+                        <img src="./banner/ma1.png" class="img-fluid w-100 mb-3 rounded-1" alt="Aerospace">
                     <h5 class="fs-6 fw-bold text-center">Mergers & Acquisitions (M&A)</h5>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                    <img src="./banner/Frame 2.png" class="img-fluid w-100 mb-3" alt="Dual-Use">
+                    <a href="./real.html">
+                        <img src="./banner/Frame 2.png" class="img-fluid w-100 mb-3 rounded-1" alt="Dual-Use">
                     <h5 class="fs-6 fw-bold text-center">Real Estate Syndication</h5>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                    <img src="./banner/Frame 1.png" class="img-fluid w-100 mb-3" alt="Energy">
+                    <a href="./invest.html">
+                        <img src="./banner/Frame 1.png" class="img-fluid w-100 mb-3 rounded-1" alt="Energy">
                     <h5 class="fs-6 fw-bold text-center">Investment Banking</h5>
+                    </a>
                 </div>
                 <div class="col-md-3">
-                    <img src="./banner/fs1.png" class="img-fluid w-100 mb-3" alt="Energy">
+                    <a href="./finance.html">
+                        <img src="./banner/fs1.png" class="img-fluid w-100 mb-3 rounded-1" alt="Energy">
                     <h5 class="fs-6 fw-bold text-center">Financial & Strategic Advisory</h5>
+                    </a>
                 </div>
             </div>
         </div>
@@ -578,21 +643,21 @@
             <div class="row g-4 mt-3">
                 <div class="col-md-3">
                     <div class="feature-img-container">
-                        <img src="./banner/New folder/niche.webp" alt="Top Tech">
+                        <img src="./banner/New folder/niche.webp" alt="Top Tech" class="rounded-1">
                     </div>
                     <h4 class="dark-card-subtitle text-info">Niche Financial Products</h4>
                     <p class="small text-light opacity-75">Identify and offer specialized financial products that cater to specific customer segments, addressing their unique needs & supporting their financial goals.</p>
                 </div>
                 <div class="col-md-3">
                     <div class="feature-img-container">
-                        <img src="./banner/New folder/expert.webp" alt="Partners">
+                        <img src="./banner/New folder/expert.webp" alt="Partners" class="rounded-1">
                     </div>
                     <h4 class="dark-card-subtitle text-info">Experienced Management Team</h4>
                     <p class="small text-light opacity-75">Having a strong and experienced management team with a deep understanding of the financial industry has been helping us to drive strategic decision-making and navigate challenges effectively.</p>
                 </div>
                 <div class="col-md-3">
                     <div class="feature-img-container">
-                        <img src="./banner/New folder/sme.webp" alt="Operators">
+                        <img src="./banner/New folder/sme.webp" alt="Operators" class="rounded-1">
                     </div>
                     <h4 class="dark-card-subtitle text-info">
                     SME and MSME Financing</h4>
@@ -600,7 +665,7 @@
                 </div> 
                 <div class="col-md-3">
                     <div class="feature-img-container">
-                        <img src="./banner/New folder/complinace.webp" alt="Top Tech">
+                        <img src="./banner/New folder/complinace.webp" alt="Top Tech" class="rounded-1">
                     </div>
                     <h4 class="dark-card-subtitle text-info">
                     Regulatroy Compliance</h4>
@@ -609,10 +674,6 @@
             </div>
         </div>
     </section>
-
-    
-
-
 
     <!-- About Start -->
     <div class="container-fluid py-5 d-none">
@@ -972,23 +1033,23 @@
     <!-- Testimonial Start -->
     <div class="container-xxl py-5 ">
         <div class="container py-5">
+            <h2 class="section-heading fs-4">Empowering Businesses</h2>
             <div class="row justify-content-center">
-                <div class="col-md-12 col-lg-9">
+                <div class="col-md-12 col-lg-12">
                     <div class="owl-carousel testimonial-carousel wow fadeIn" data-wow-delay="0.2s">
                         <div class="testimonial-item">
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                        <img class="img-fluid rounded-1" src="./banner/cta.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="testimonial-text pb-5 pb-md-0">
                                         <h3>Corporate Transaction Advisory</h3>
-                                        <p>Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
-                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
-                                            dolore erat
-                                            amet</p>
+                                        <p>We provide end-to-end advisory support for mergers, acquisitions, restructuring,
+                                            and capital raising. Our strategic insight and rigorous due diligence ensure
+                                            seamless transactions that maximize value and minimize risk.</p>
                                         <h5 class="mb-0">Boris Johnson</h5>
                                     </div>
                                 </div>
@@ -998,17 +1059,17 @@
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                        <img class="img-fluid rounded-1" src="./banner/empower.jpg" alt="">
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="testimonial-text pb-5 pb-md-0">
-                                        <h3>Business Transformation & 
-Management Consulting</h3>
-                                        <p>Clita erat ipsum et lorem et sit, sed
-                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
-                                            dolore erat
-                                            amet</p>
+                                        <h3>Business Transformation &
+                                            Management Consulting</h3>
+                                        <p>We help organizations reimagine their operations, optimize performance, and drive
+                                            sustainable growth. Through data-driven strategies and hands-on execution
+                                            support, we enable lasting transformation across people, processes, and
+                                            technology.</p>
                                         <h5 class="mb-0">Alexander Bell</h5>
                                     </div>
                                 </div>
@@ -1018,17 +1079,17 @@ Management Consulting</h3>
                             <div class="row g-5 align-items-center">
                                 <div class="col-md-6">
                                     <div class="testimonial-img">
-                                        <img class="img-fluid" src="./banner/empower.jpg" alt="">
+                                        <img class="img-fluid rounded-1" src="./banner/customer.jpg" alt="" >
                                     </div>
                                 </div>
                                 <div class="col-md-6">
                                     <div class="testimonial-text pb-5 pb-md-0">
                                         <h3>Differentiating by Offering
-Superior Customer Value.</h3>
-                                        <p>Diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed
-                                            stet no labore lorem sit. Sanctus clita duo justo et tempor eirmod magna
-                                            dolore erat
-                                            amet</p>
+                                            Superior Customer Value.</h3>
+                                        <p>We empower businesses to stand out in competitive markets by enhancing customer
+                                            experience, refining value propositions, and building strong brand loyalty. Our
+                                            approach focuses on delivering measurable impact and long-term competitive
+                                            advantage.</p>
                                         <h5 class="mb-0">Bradley Gordon</h5>
                                     </div>
                                 </div>
@@ -1112,13 +1173,12 @@ Superior Customer Value.</h3>
                     <h5 class="text-white mb-4">Our Services</h5>
                     <div class="row">
                         <div class="col-md-6">
-                            <a class="btn btn-link" href="#!">Mergers & Acquisitions (M&A)</a>
-                    <a class="btn btn-link" href="#!">Real Estate Syndication</a>
-                    <a class="btn btn-link" href="#!" style="text-wrap: nowrap;">Corporate Transaction Advisory</a>
+                            <a class="btn btn-link" href="./ma.html">Mergers & Acquisitions (M&A)</a>
+                    <a class="btn btn-link" href="./real.html">Real Estate Syndication</a>
                         </div>
                         <div class="col-md-6">
-                             <a class="btn btn-link" href="#!">Investment Banking</a>
-                    <a class="btn btn-link" href="#!">Financial & Strategic Advisory</a>
+                             <a class="btn btn-link" href="./invest.html">Investment Banking</a>
+                    <a class="btn btn-link" href="./finance.html">Financial & Strategic Advisory</a>
                         </div>
                     </div>
                     
@@ -1134,8 +1194,8 @@ Superior Customer Value.</h3>
                     <div class="col-md-6 text-center text-md-end">
                         <div class="footer-menu">
                             <!-- <a href="#!">Home</a> -->
-                            <a href="#!">Disclaimer</a>
-                            <a href="#!">Privacy Policy</a>
+                            <a href="./disclaimer.html">Disclaimer</a>
+                            <a href="./privacy.html">Privacy Policy</a>
                             <!-- <a href="#!">FAQs</a> -->
                         </div>
                     </div>
@@ -1147,7 +1207,7 @@ Superior Customer Value.</h3>
 
 
     <!-- Back to Top -->
-    <a href="#!" class="btn btn-lg btn-lg-square back-to-top rounded-1" style="background-color: #0dcaf0 !important; color: #fff;"><i class="bi bi-arrow-up"></i></a>
+    <a href="#!" class="btn btn-lg btn-lg-square back-to-top rounded-1" style="background-color: #2471ff !important; color: #fff;"><i class="bi bi-arrow-up"></i></a>
 
 
     <!-- JavaScript Libraries -->

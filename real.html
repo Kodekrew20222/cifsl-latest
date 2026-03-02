@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <li class="nav-item dropdown position-static">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
                                 Services
                             </a>
                         
@@ -199,13 +199,13 @@
                         
                                         <div class="col-md-3">
                                             <h6 class="fw-bold">Corporate Advisory</h6>
-                                            <a href="./ma.html" class="dropdown-item ps-0">Mergers & Acquisitions Consulting</a>
-                                            <a href="./invest.html" class="dropdown-item ps-0">Investment Banking</a>
+                                            <a href="./ma.html" class="dropdown-item ps-0 ">Mergers & Acquisitions (M&A) Consulting</a>
+                                            <a href="./invest.html" class="dropdown-item ps-0 ">Investment Banking</a>
                                         </div>
                         
                                         <div class="col-md-2">
                                             <h6 class="fw-bold">Investment Solutions</h6>
-                                            <a href="./real.html" class="dropdown-item ps-0">Real Estate Syndication</a>
+                                            <a href="./real.html" class="dropdown-item ps-0 active">Real Estate Syndication</a>
                                             <a href="./finance.html" class="dropdown-item ps-0">Financial & Strategic Advisory</a>
                                         </div>
                         
@@ -221,9 +221,9 @@
                             </div>
                         </li>
                         <a href="./legacy.html" class="nav-item nav-link">Legacy</a>
-                        <a href="./mission.html" class="nav-item nav-link">Mission</a>
+                        <a href="./mission.html" class="nav-item nav-link ">Mission</a>
                         <a href="./team.html" class="nav-item nav-link">Team</a>
-                        <a href="./contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -231,131 +231,129 @@
     </div>
     <!-- Navbar End -->
 
-
     <style>
-        .card {
-            transition: transform 0.3s ease;
-            background-color: #ffffff;
-            border: 1px solid #dddede;
+        .innovation-section {
+            background: linear-gradient(rgba(0, 40, 70, 0.0), rgba(0, 40, 70, 0)),
+                url('./banner/real.jpg') center/cover no-repeat;
+            background-position: center;
+            min-height: 350px;
+            padding: 80px 0;
         }
     
-        .card:hover {
-            transform: translateY(-5px);
-            /* Subtle lift on hover */
+        .content-box {
+            background: rgba(10, 45, 80, 0.85);
+            padding: 40px 50px;
+            max-width: 900px;
+            border-radius: 4px;
         }
     
-        .card-title {
-            color: #001233;
-            letter-spacing: 1px;
-        }
-    
-        .bi {
-            opacity: 0.8;
+        .content-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 400;
         }
     </style>
-    
-    <div class="container my-5">
-        <div class="text-center wow fadeIn" data-wow-delay="0.1s">
-            <h2 class="mb-5">REACH US AT</h2>
+     
+    <section class="innovation-section d-flex align-items-center">
+        <div class="container">
+            <div class="content-box mx-auto">
+                <h2 class="section-heading fs-4 text-white">Real Estate Syndication</h2>
+                <p class="mb-0 text-white">
+                    Democratizing access to institutional-grade opportunities.
+                    <br>
+                
+                    High-quality assets—like Grade-A Commercial Real Estate or Warehousing—are often out of reach for individual
+                    investors due to high ticket sizes. We advise on structuring "Club Deals" or Syndicates, allowing like-minded
+                    investors to co-invest in premium opportunities.
+                </p>
+            </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm text-center p-4 rounded-1">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#001233"
-                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                            </svg>
-                        </div>
-                        <h5 class="card-title fw-bold">Our Office</h5>
-                        <p class="card-text text-muted">
-                            F.No. B1-1001, Sector-B, Pocket-1,<br> Vasant Kunj New Delhi - 110070.
+    </section>
+
+    <style>
+        
+    
+        .program-section h3 {
+            font-size: 26px;
+        }
+    
+        .program-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .sub-head{
+            font-size: 18px !important;
+            font-weight: 400;
+        }
+    
+        @media (max-width: 991px) {
+            .border-start {
+                border-left: none !important;
+                border-top: 1px solid #ddd;
+                padding-top: 30px;
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+    <section class="program-section py-5">
+        <div class="container">
+            <div class="row align-items-start">
+    
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">Strategic Commercial Real Estate & Syndication Advisory</h2>
+    
+                    <p>
+                       We enable investors to access premium commercial real estate opportunities through structured club deals and syndicates. From opportunity analysis and financial modeling to legal structuring, due diligence, and exit strategy planning, we provide end-to-end advisory to ensure tax-efficient, transparent, and high-yield investments in Grade-A assets.
+                    </p>
+    
+                    <!-- <p>
+                        A successful transaction starts with the right partner. We move beyond simple databases to identify targets or buyers that align with your long-term corporate strategy.
+                    </p> -->
+    
+                    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Commercial Real Estate (CRE) Opportunity Analysis:</h2>
+                        <p>
+                            We scout and evaluate high-yield Pre-Leased Commercial Properties, Warehouses, or Industrial assets. We perform the financial feasibility analysis, calculating Cap Rates, Rental Yields, and Internal Rate of Return (IRR) to validate the asking price.
                         </p>
                     </div>
-                </div>
-            </div>
     
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm text-center p-4 rounded-1">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#001233"
-                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                            </svg>
-                        </div>
-                        <h5 class="card-title fw-bold">Email Us</h5>
-                        <p class="card-text text-muted">
-                            For inquiries and strategic partnerships:<br>
-                            <a href="mailto:info@cifsl.com" class="text-decoration-none"
-                                style="color: #125b5b;">info@cifsl.com</a>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Syndication Structuring Advisory:</h2>
+                        <p>
+                            We advise on the legal and financial structure required for a group of investors to buy an asset together. Whether through a Special Purpose Vehicle (SPV), LLP, or fractional ownership model, we ensure the structure is tax-efficient and legally robust.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
-                <h2 class="mb-5">GET IN TOUCH</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <p class=" mb-4" style="text-align: justify;">Looking for strategic advisory, capital for expansion, or
-                        innovative fintech solutions, our team is ready to collaborate. Fill out the form and our associates
-                        will get in touch to discuss how we can help you achieve outsized returns.</p>
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button class="btn btn-primary px-5 py-3 rounded-1" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Due Diligence Coordination: </h2>
+                        <p>
+                           We coordinate the legal title search and technical valuation of the property on behalf of the investor group to ensure the asset is free from encumbrances before capital is committed.
+                        </p>
                     </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Exit Strategy Planning: </h2>
+                        <p>
+                            Before entering a real estate deal, we help you plan the exit. We analyze liquidity timelines and potential exit routes (Resale to REITs, institutional buyout) to ensure your capital doesn't get trapped indefinitely.
+                        </p>
+                    </div>
+    
                 </div>
+    
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
-
-    <div class="container">
-        <div class="col-md-10 mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.464220269184!2d77.16337089999999!3d28.525763299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1e762c8a325d%3A0x964610d9f61e9b0d!2sb1%2C%201001%2C%20Sector%20B%20Rd%2C%20Pocket%203%2C%20Sector%20B%2C%20Vasant%20Kunj%2C%20New%20Delhi%2C%20Delhi%20110070!5e0!3m2!1sen!2sin!4v1772395580704!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-    </div>
-
+        
+    </section>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">

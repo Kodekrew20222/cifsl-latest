@@ -183,7 +183,7 @@
                             </div>
                         </div>
                         <li class="nav-item dropdown position-static">
-                            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" data-bs-toggle="dropdown">
                                 Services
                             </a>
                         
@@ -199,7 +199,7 @@
                         
                                         <div class="col-md-3">
                                             <h6 class="fw-bold">Corporate Advisory</h6>
-                                            <a href="./ma.html" class="dropdown-item ps-0">Mergers & Acquisitions Consulting</a>
+                                            <a href="./ma.html" class="dropdown-item ps-0 active">Mergers & Acquisitions Consulting</a>
                                             <a href="./invest.html" class="dropdown-item ps-0">Investment Banking</a>
                                         </div>
                         
@@ -221,9 +221,9 @@
                             </div>
                         </li>
                         <a href="./legacy.html" class="nav-item nav-link">Legacy</a>
-                        <a href="./mission.html" class="nav-item nav-link">Mission</a>
+                        <a href="./mission.html" class="nav-item nav-link ">Mission</a>
                         <a href="./team.html" class="nav-item nav-link">Team</a>
-                        <a href="./contact.html" class="nav-item nav-link active">Contact</a>
+                        <a href="./contact.html" class="nav-item nav-link">Contact</a>
                     </div>
                 </div>
             </nav>
@@ -231,131 +231,239 @@
     </div>
     <!-- Navbar End -->
 
-
     <style>
-        .card {
-            transition: transform 0.3s ease;
-            background-color: #ffffff;
-            border: 1px solid #dddede;
+        .innovation-section {
+            background: linear-gradient(rgba(0, 40, 70, 0.0), rgba(0, 40, 70, 0)),
+                url('./banner/ma.webp') center/cover no-repeat;
+            background-position: center;
+            min-height: 350px;
+            padding: 80px 0;
         }
     
-        .card:hover {
-            transform: translateY(-5px);
-            /* Subtle lift on hover */
+        .content-box {
+            background: rgba(10, 45, 80, 0.85);
+            padding: 40px 50px;
+            max-width: 900px;
+            border-radius: 4px;
         }
     
-        .card-title {
-            color: #001233;
-            letter-spacing: 1px;
-        }
-    
-        .bi {
-            opacity: 0.8;
+        .content-box p {
+            font-size: 16px;
+            line-height: 1.8;
+            font-weight: 400;
         }
     </style>
-    
-    <div class="container my-5">
-        <div class="text-center wow fadeIn" data-wow-delay="0.1s">
-            <h2 class="mb-5">REACH US AT</h2>
+     
+    <section class="innovation-section d-flex align-items-center">
+        <div class="container">
+            <div class="content-box mx-auto">
+                <h2 class="section-heading fs-4 text-white">Mergers & Acquisitions Consulting</h2>
+                <p class="mb-0 text-white">
+                    Inorganic growth requires organic strategy. We guide you from Deal Origination to Deal Closure.
+                
+                    In today’s dynamic economy, the fastest route to scale or liquidity is often through a strategic transaction.
+                    However, M&A is high-stakes territory; the difference between a successful merger and a failed integration lies in
+                    the details of diligence and the structure of the deal.
+                    <br>
+                
+                    At Corporate International Financial Services Limited, we act as your Strategic M&A Advisors. Whether you are
+                    looking to acquire a competitor to capture market share (Buy-Side) or seeking a strategic exit for your hard-built
+                    enterprise (Sell-Side), we provide the analytical rigor, market anonymity, and negotiation support required to close
+                    transactions that create lasting value.
+                </p>
+            </div>
         </div>
-        <div class="row g-4 justify-content-center">
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm text-center p-4 rounded-1">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#001233"
-                                class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
-                            </svg>
-                        </div>
-                        <h5 class="card-title fw-bold">Our Office</h5>
-                        <p class="card-text text-muted">
-                            F.No. B1-1001, Sector-B, Pocket-1,<br> Vasant Kunj New Delhi - 110070.
+    </section>
+
+    <style>
+        
+    
+        .program-section h3 {
+            font-size: 26px;
+        }
+    
+        .program-section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .sub-head{
+            font-size: 18px !important;
+            font-weight: 400;
+        }
+    
+        @media (max-width: 991px) {
+            .border-start {
+                border-left: none !important;
+                border-top: 1px solid #ddd;
+                padding-top: 30px;
+                margin-top: 30px;
+            }
+        }
+    </style>
+
+    <section class="program-section py-5">
+        <div class="container">
+            <div class="row align-items-start">
+    
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">Strategic Deal Origination & Target Identification</h2>
+    
+                    <p>
+                        Finding the right fit, not just the available option.
+                    </p>
+    
+                    <p>
+                        A successful transaction starts with the right partner. We move beyond simple databases to identify targets or buyers that align with your long-term corporate strategy.
+                    </p>
+    
+                    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Strategic Fit Analysis:</h2>
+                        <p>
+                            We begin by defining your "Ideal Partner Profile." We analyze synergies in technology, geography, customer base, and culture to ensure the target aligns with your growth roadmap.
                         </p>
                     </div>
-                </div>
-            </div>
     
-            <div class="col-md-5">
-                <div class="card h-100 shadow-sm text-center p-4 rounded-1">
-                    <div class="card-body">
-                        <div class="mb-3">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#001233"
-                                class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                                <path
-                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                            </svg>
-                        </div>
-                        <h5 class="card-title fw-bold">Email Us</h5>
-                        <p class="card-text text-muted">
-                            For inquiries and strategic partnerships:<br>
-                            <a href="mailto:info@cifsl.com" class="text-decoration-none"
-                                style="color: #125b5b;">info@cifsl.com</a>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Market Scanning & Screening: </h2>
+                        <p>
+                            Utilizing industry intelligence and our network, we scan the market to identify potential targets or acquirers, including those who may not be actively on the market but are open to strategic discussions.
                         </p>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container py-5">
-            <div class="text-center wow fadeIn" data-wow-delay="0.1s">
-                <h2 class="mb-5">GET IN TOUCH</h2>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <p class=" mb-4" style="text-align: justify;">Looking for strategic advisory, capital for expansion, or
-                        innovative fintech solutions, our team is ready to collaborate. Fill out the form and our associates
-                        will get in touch to discuss how we can help you achieve outsized returns.</p>
-                    <div class="wow fadeIn" data-wow-delay="0.3s">
-                        <form>
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="name" placeholder="Your Name">
-                                        <label for="name">Your Name</label>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-floating">
-                                        <input type="email" class="form-control" id="email" placeholder="Your Email">
-                                        <label for="email">Your Email</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
-                                        <label for="subject">Subject</label>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-floating">
-                                        <textarea class="form-control" placeholder="Leave a message here" id="message"
-                                            style="height: 150px"></textarea>
-                                        <label for="message">Message</label>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center mt-4">
-                                    <button class="btn btn-primary px-5 py-3 rounded-1" type="submit">Send Message</button>
-                                </div>
-                            </div>
-                        </form>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Anonymity Maintenance: </h2>
+                        <p>
+                            We initiate the delicate early conversations on a "No-Name" basis, protecting your confidentiality and intent until a genuine interest is established.
+                        </p>
                     </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Teaser & Deal Collateral:  </h2>
+                        <p>
+                           For Sell-Side mandates, we craft compelling "Blind Teasers" and Information Memorandums (IM) that highlight your value proposition without revealing sensitive trade secrets prematurely.
+                        </p>
+                    </div>
+    
                 </div>
+    
             </div>
         </div>
-    </div>
-    <!-- Contact End -->
-
-    <div class="container">
-        <div class="col-md-10 mx-auto">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.464220269184!2d77.16337089999999!3d28.525763299999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1e762c8a325d%3A0x964610d9f61e9b0d!2sb1%2C%201001%2C%20Sector%20B%20Rd%2C%20Pocket%203%2C%20Sector%20B%2C%20Vasant%20Kunj%2C%20New%20Delhi%2C%20Delhi%20110070!5e0!3m2!1sen!2sin!4v1772395580704!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="container mt-5">
+            <div class="row align-items-start">
+    
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">Comprehensive Due Diligence Management</h2>
+    
+                    <p>
+                        Uncovering risks before they become liabilities.
+                    </p>
+    
+                    <p>
+                        The "Letter of Intent" is just the beginning. The real value is preserved during Due Diligence. We act as your internal PMO, managing the intense scrutiny of the diligence phase to ensure momentum is maintained while risks are identified.
+                    </p>
+    
+                    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <!-- <h2 class="sub-head fs-4 mb-2">Strategic Fit Analysis:</h2> -->
+                        <p>
+                            Financial & Tax Diligence Support: We assist in organizing and normalizing your financial data. We proactively identify potential "deal-breakers" in your tax history or balance sheet and propose mitigation strategies before the counterparty finds them.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <!-- <h2 class="sub-head fs-4 mb-2">Market Scanning & Screening: </h2> -->
+                        <p>
+                            Operational & Commercial Review: We help evaluate the target’s true operational health—analyzing customer concentration risks, supply chain stability, and the sustainability of revenue streams.
+                        </p>
+                    </div>
+                    <div>
+                        <!-- <h2 class="sub-head fs-4 mb-2">Anonymity Maintenance: </h2> -->
+                        <p>
+                            Virtual Data Room (VDR) Management: We structure and manage the VDR, ensuring that sensitive data is shared securely, in stages, and only with authorized personnel, keeping a full audit trail of who viewed what.
+                        </p>
+                    </div>
+                    <div>
+                        <!-- <h2 class="sub-head fs-4 mb-2">Teaser & Deal Collateral:  </h2> -->
+                        <p>
+                           Coordination with Subject Experts: We coordinate with your appointed Legal Counsels and Statutory Auditors to ensure a seamless flow of information between financial, legal, and secretarial diligence teams.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
         </div>
-    </div>
-
+        <div class="container mt-5">
+            <div class="row align-items-start">
+    
+                <!-- LEFT SIDE -->
+                <div class="col-lg-5 pe-lg-5 my-auto">
+    
+                    <h2 class="section-heading fs-4">Deal Structuring & Negotiation Advisory</h2>
+    
+                    <p>
+                        Bridging the valuation gap to close the deal.
+                    </p>
+    
+                    <p>
+                        Price is important, but deal structure is critical. We stand by your management team during negotiations to ensure the terms of the deal protect your future interests.
+                    </p>
+    
+                    
+                </div>
+    
+    
+                <!-- RIGHT SIDE -->
+                <div class="col-lg-7 ps-lg-5 border-start">
+    
+                    <div class="mb-4">
+                        <h2 class="sub-head fs-4 mb-2">Valuation Defense:</h2>
+                        <p>
+                            We provide the financial arguments and valuation models to defend your asking price (Sell-Side) or justify a lower offer (Buy-Side), grounding negotiations in data rather than emotion.
+                        </p>
+                    </div>
+    
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Deal Structuring Advisory: </h2>
+                        <p>
+                            We advise on the mechanics of the transaction—Cash vs. Stock swaps, Asset Sale vs. Share Sale—to optimize tax efficiency and liability protection for our clients.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Gap-Bridging Mechanisms: </h2>
+                        <p>
+                            When buyers and sellers disagree on value, we structure creative solutions such as Earn-Outs, Escrow Arrangements, or Deferred Payments to bridge the gap and keep the deal alive.
+                        </p>
+                    </div>
+                    <div>
+                        <h2 class="sub-head fs-4 mb-2">Definitive Agreement Support:  </h2>
+                        <p>
+                           We work alongside legal teams to review the commercial aspects of the Share Purchase Agreement (SPA) and Shareholders' Agreement (SHA), ensuring that representations, warranties, and indemnity clauses are commercially fair.
+                        </p>
+                    </div>
+    
+                </div>
+    
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-white-50 footer pt-5">
