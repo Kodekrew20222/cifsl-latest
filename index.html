@@ -248,14 +248,33 @@
 
     <div class="hero-overlay"></div>
 
-    <div class="container py-5 position-relative hero-content text-white mt-9">
+    <div class="container-fluid py-5 position-relative hero-content text-white mt-9">
         <div class="row g-5 align-items-center mb-5">
-            <div class="col-lg-9">
-                <h1 class="display-1 mb-4 animated slideInRight text-white">Empowering Growth with Financial Solutions</h1>
+            <div class="col-lg-12 pt-5">
+                <!-- <h1 class="display-1 mb-4 animated slideInRight text-white text-center pt-5">Empowering Growth with Financial Solutions</h1> -->
+                 <div id="tonta" class="display-1 text-center text-white pt-5"></div>
             </div>
         </div>
     </div>
     </div>
+
+    <script>
+
+        var string = "Empowering Growth with Financial Solutions"; /* type your text here */
+        var array = string.split("");
+        var timer;
+
+        function frameLooper() {
+            if (array.length > 0) {
+                document.getElementById("tonta").innerHTML += array.shift();
+            } else {
+                clearTimeout(timer);
+            }
+            loopTimer = setTimeout('frameLooper()', 100); /* change 70 for speed */
+
+        }
+        frameLooper();
+    </script>
 
     <div class="container-fluid pb-5 hero-header bg-light mb-5 d-none">
         <div class="container py-5">
@@ -337,7 +356,7 @@
     
                         <div class="aum-details ms-4">
                             <h5 class="mb-0 fw-bold text-uppercase tracking-wider">Assets Under Management</h5>
-                            <p class="mb-0 text-muted small">Specializing since 25+ years</p>
+                            <h5 class="mb-0 text-muted">Specializing since 25+ years</h5>
                         </div>
                     </div>
                 </div>
@@ -413,41 +432,41 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-md-3">
                     <div class="stat-card card-white">
-                        <div class="d-flex justify-content-center justify-content-md-between align-items-start">
+                        <div class="d-flex justify-content-center">
                             <p class="stat-label">AUM Growth</p>
                             
                         </div>
-                        <h4 class="stat-number text-center text-md-start">20-40%</h4>
+                        <h4 class="stat-number text-center">20-40%</h4>
                     </div>
                 </div>
     
     
                 <div class="col-md-3">
                     <div class="stat-card card-blue">
-                        <div class="d-flex justify-content-center justify-content-md-between align-items-start">
+                        <div class="d-flex justify-content-center">
                             <p class="stat-label text-white">GNPA</p>
                            
                         </div>
-                        <h2 class="stat-number text-center text-md-start text-white">1.0%</h2>
+                        <h2 class="stat-number text-center text-white">1.0%</h2>
                     </div>
                 </div>
 
                 <div class="col-md-3">
                     <div class="stat-card card-white">
-                        <div class="d-flex justify-content-center justify-content-md-between align-items-start">
+                        <div class="d-flex justify-content-center">
                             <p class="stat-label">Profit Growth</p>
                            
                         </div>
-                        <h4 class="stat-number text-center text-md-start">25-30%</h4>
+                        <h4 class="stat-number text-center">25-30%</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="stat-card card-blue">
-                        <div class="d-flex justify-content-center justify-content-md-between align-items-start">
+                        <div class="d-flex justify-content-center">
                             <p class="stat-label text-white">NNPA</p>
                            
                         </div>
-                        <h2 class="stat-number text-center text-md-start text-white">NNPA</h2>
+                        <h2 class="stat-number text-center text-white">NNPA</h2>
                     </div>
                 </div>
             </div>
