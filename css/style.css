@@ -1,5 +1,9 @@
 /********** Template CSS **********/
 
+html,body{
+    overflow-x: hidden;
+}
+
 /*** Spinner ***/
 #spinner {
     opacity: 0;
@@ -416,6 +420,9 @@
 }
 
 @media (max-width: 768px) {
+    .hero-header{
+        margin-top: -160px;
+    }
     .testimonial-carousel .owl-dots {
         left: 0;
         right: auto;
@@ -433,29 +440,6 @@
     background: url(../img/hero-bg.jpg) bottom right no-repeat;
     background-size: cover;
 }
-
-@media (min-width: 992px) {
-    .newsletter .container {
-        max-width: 100% !important;
-    }
-
-    .newsletter .newsletter-text  {
-        padding-right: calc(((100% - 960px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1200px) {
-    .newsletter .newsletter-text  {
-        padding-right: calc(((100% - 1140px) / 2) + .75rem);
-    }
-}
-
-@media (min-width: 1400px) {
-    .newsletter .newsletter-text  {
-        padding-right: calc(((100% - 1320px) / 2) + .75rem);
-    }
-}
-
 
 /*** Footer ***/
 .footer .btn.btn-link {
@@ -506,4 +490,99 @@
     margin-right: 0;
     padding-right: 0;
     border-right: none;
+}
+
+/* Styling for Prominence */
+        .aum-container {
+            border-left: 3px solid #001233;
+            padding-left: 20px;
+        }
+    
+        .aum-highlight {
+            background: linear-gradient(135deg, #001233 0%, #03201f 100%);
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 12px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+        }
+    
+
+        .currency {
+            font-size: 1rem;
+            vertical-align: top;
+            margin-right: 2px;
+            font-weight: 300;
+        }
+    
+        .amount {
+            font-size: 2rem;
+            font-weight: 500;
+            line-height: 1;
+            letter-spacing: -1px;
+        }
+    
+        .unit {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            margin-left: 5px;
+            font-weight: 400;
+        }
+    
+        .tracking-wider {
+            letter-spacing: 2px;
+            color: #001233;
+        }
+
+@media (min-width: 992px) {
+    .newsletter .container {
+        max-width: 100% !important;
+    }
+
+    .newsletter .newsletter-text  {
+        padding-right: calc(((100% - 960px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .newsletter .newsletter-text  {
+        padding-right: calc(((100% - 1140px) / 2) + .75rem);
+    }
+}
+
+@media (min-width: 1400px) {
+    .newsletter .newsletter-text  {
+        padding-right: calc(((100% - 1320px) / 2) + .75rem);
+    }
+}
+
+@media (max-width: 500px) {
+    .mobile-nav{
+        background-color: #001233 !important;
+    }
+    .aum-highlight{
+        height: 60px;
+        width: 200px;
+    }
+    .amount{
+        font-size: 20px;
+        padding: 0;
+    }
+    .topa{
+        right: 15px;
+        bottom: 30px;
+    }
+    .pad-fot{
+        padding-left: 60px;
+    }
+    .display-title {
+        font-size: 1.3rem !important;
+    }
+    .innovation-section{
+        padding: 25px 0 !important;
+    }
+    .content-box{
+        padding: 34px 20px !important;
+    }
 }
