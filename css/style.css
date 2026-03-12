@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../fonts/guardian-sans-regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+p,div,a,h1,h2,h3,h4,h5,h6, .btn, .nav-link, .dropdown-item {
+    font-family: 'MyCustomFont', sans-serif !important;
+}
+
 /********** Template CSS **********/
 
 /* html,body{
@@ -101,6 +112,7 @@
 .navbar .dropdown-menu {
     left: 0;
     right: 0;
+    border-radius: 10px;
 }
 
 @media (max-width: 991.98px) {
